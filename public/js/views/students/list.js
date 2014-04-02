@@ -33,9 +33,7 @@ define([
                 var selectedCheckboxes = self.$el.find('input[type="checkbox"]:checked');
 
                 if(!selectedCheckboxes.length){
-
                     alert('Please select one or more students');
-
                     return;
                 }
 
