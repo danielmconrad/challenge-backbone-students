@@ -6,10 +6,12 @@
 
 <h3>All Students</h3>
 
-{{#each students}}<div class="student preview" data-id="{{id}}">
-	<div class="profile-image"><i class="fa fa-user"></i></div>
-	<div class="check">
-		<input type="checkbox" data-id="{{id}}">
-	</div>
-	<div class="name"><a href="#/students/{{id}}" data-action="goToStudent">{{name}}</a></div>
-</div>{{/each}}
+<div class="student-container">
+	{{#each students}}<div class="student preview" data-id="{{id}}">
+		<div class="profile-image"><i class="fa fa-user"></i></div>
+		<div class="check">
+			<input type="checkbox" data-id="{{id}}">
+		</div>
+		<div class="name"><a href="#/students/{{id}}" data-action="goToStudent">{{name}}</a></div>
+	</div>{{/each}}
+</div>
