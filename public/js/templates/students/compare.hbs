@@ -1,0 +1,35 @@
+<nav>
+	<a class="btn btn-primary" href="#/students">
+		<i class="fa fa-arrow-left"></i> Back
+	</a>
+</nav>
+
+<h3>Compare Students:</h3>
+
+{{#each students}}<div class="student preview condensed">
+	<div class="profile-image"><i class="fa fa-user"></i></div>
+	<div class="name">{{name}}</div>
+</div>{{/each}}
+
+<h3>Shared Schedule:</h3>
+
+<table class="table">
+	<thead>
+		<th>Period</th>
+		<th>Class Name</th>
+		<th>Teacher Name</th>
+	</thead>
+	<tbody>
+		{{#each schedule}}
+			<tr>
+				<td>{{period}}</td>
+				<td>{{className}}</td>
+				<td>{{teacherName}}</td>
+			</tr>
+		{{else}}
+			<tr>
+				<td colspan="3">No shared classes</td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
